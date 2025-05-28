@@ -1,0 +1,16 @@
+server:
+  port: 8080
+
+management.endpoints.web.exposure.include: metrics
+
+spring:
+  threads:
+    virtual:
+      enabled: false
+  task:
+    execution:
+      pool:
+        core-size: 4
+        max-size: 10
+        queue-capacity: 50
+      thread-name-prefix: llm-task-
